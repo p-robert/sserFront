@@ -50,7 +50,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-th-each="savingsTransaction : ${savingsTransactionList}">
+            <tr data-th-each="savingsTransaction : ${savingsAccount.savingsTransactionList}">
                 <td data-th-text="${savingsTransaction.date}">...</td>
                 <td data-th-text="${savingsTransaction.description}">...</td>
                 <td data-th-text="${savingsTransaction.type}">...</td>
@@ -65,6 +65,10 @@
 
 
 <div th:replace="common/header :: body-bottom-scripts"/>
-
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
 </body>
 </html>

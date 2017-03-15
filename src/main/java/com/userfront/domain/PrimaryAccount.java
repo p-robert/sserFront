@@ -30,7 +30,6 @@ public class PrimaryAccount  {
 
     
     @OneToOne(fetch=FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
     private User user;
     
     

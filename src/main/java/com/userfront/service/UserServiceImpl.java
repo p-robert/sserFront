@@ -64,8 +64,9 @@ public class UserServiceImpl implements UserService {
 			user.getUserRoles().addAll(userRoles);
 
 			user.setPrimaryAccount(accountService.createPrimaryAccount());
+			user.getPrimaryAccount().setUser(user);
 			user.setSavingsAccount(accountService.createSavingsAccount());
-
+			user.getSavingsAccount().setUser(user);
 			localUser = userDao.save(user);
 		}
 		return localUser;

@@ -52,7 +52,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr data-th-each="primaryTransaction : ${primaryTransactionList}">
+            <tr data-th-each="primaryTransaction : ${primaryAccount.primaryTransactionList}">
                 <td data-th-text="${primaryTransaction.date}">...</td>
                 <td data-th-text="${primaryTransaction.description}">...</td>
                 <td data-th-text="${primaryTransaction.type}">...</td>

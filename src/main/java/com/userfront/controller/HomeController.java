@@ -88,7 +88,7 @@ public class HomeController {
 	 @RequestMapping(value = "/registrationConfirm", method = RequestMethod.GET)
 	    public String confirmRegistration(final Locale locale, final Model model, @RequestParam("token") final String token) throws UnsupportedEncodingException {
 	        final TokenState result = userService.validateVerificationToken(token);
-	        if (result.equals("valid")) {
+	        if (result == TokenState.TOKEN_VALID) {
 	            final User user = userService.getUser(token);
 	            LOG.info(user.toString());
 	            
